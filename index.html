@@ -163,10 +163,11 @@
 </div>
 
 <div class="tabs-container">
-    <button class="tab-btn active" onclick="openTab(event, 'html-games')">Games / HTML</button>
-    <button class="tab-btn" onclick="openTab(event, 'roblox-scripts')">Scripts / Roblox</button>
-    <button class="tab-btn" onclick="openTab(event, 'credits-tab')">Credits & Goals</button>
-    <button class="tab-btn" onclick="openTab(event, 'team-tab')">Team</button>
+    <button id="btn-html" class="tab-btn active" onclick="openTab(event, 'html-games')">Games / HTML</button>
+    <button id="btn-roblox" class="tab-btn" onclick="openTab(event, 'roblox-scripts')">Scripts / Roblox</button>
+    <button id="btn-packs" class="tab-btn" onclick="openTab(event, 'packs-tab')">Packs</button>
+    <button id="btn-credits" class="tab-btn" onclick="openTab(event, 'credits-tab')">Credits & Goals</button>
+    <button id="btn-team" class="tab-btn" onclick="openTab(event, 'team-tab')">Team</button>
 </div>
 
 <div class="container">
@@ -195,15 +196,37 @@
         </div>
     </div>
 
-    <div id="credits-tab" class="tab-content">
-        <div class="card" style="text-align: left; max-width: 800px; margin: 0 auto;">
-            <h2 style="color: var(--accent); margin-bottom: 20px;">Project Multi Games</h2>
-            <p id="creditMission" style="color: var(--text-dim); line-height: 1.7; margin-bottom: 30px;"></p>
-            <button onclick="shareSite()" class="btn-main" style="width:auto; padding: 12px 30px;">
-                <span id="shareText">Share Project Link</span>
-            </button>
+    <div id="packs-tab" class="tab-content">
+        <div class="grid">
+            <div class="card" data-category="packs" style="border: 2px solid var(--accent);">
+                <div class="badge-new" style="background: var(--accent); position: absolute; top: 10px; right: 10px; padding: 5px 10px; border-radius: 5px; font-size: 0.7rem;">PACK</div>
+                <h3>SpeedRun Game Pack</h3>
+                <p style="color: var(--text-dim); margin: 15px 0;">10 Games (Python + Pygame)</p>
+                <a href="https://github.com/GenesisCode-000/SpeedRun-Game-Pack/raw/refs/heads/main/Universal_Game_Pack.zip" class="btn-main" style="text-decoration: none; display: block; text-align: center;">Download (.zip)</a>
+            </div>
         </div>
     </div>
+
+<div id="credits-tab" class="tab-content">
+    <div class="card" style="text-align: left; max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--accent); margin-bottom: 20px;">Project Multi Games</h2>
+        
+        <p style="color: var(--text-dim); line-height: 1.7; margin-bottom: 30px;">
+            Our mission is to create a powerful and secure hub for the gaming community. 
+            This project was born out of pure passion; we create HTML games to explore 
+            the joy of development and to provide a seamless, enjoyable experience for players. 
+            <br><br>
+            It all started within a community of passionate developers where sharing knowledge 
+            and feedback is essential. Today, I collaborate with talented creators to push the 
+            boundaries of browser-based gaming. Every test and every piece of feedback helps 
+            us build a brighter future for this project.
+        </p>
+
+        <button onclick="shareSite()" class="btn-main" style="width:auto; padding: 12px 30px;">
+            <span id="shareText">Share Project Link</span>
+        </button>
+    </div>
+</div>
 
     <div id="team-tab" class="tab-content">
         <div class="grid">
